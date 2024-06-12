@@ -1,0 +1,4 @@
+<form class="message-input" [formGroup]="formMessage" (submit)="sendMessage()">
+  <input formControlName="message" placeholder="Type a message">
+  <button class="btn btn-primary" [disabled]="formMessage.invalid">Send</button>
+</form>

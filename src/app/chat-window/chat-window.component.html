@@ -1,0 +1,15 @@
+<div class="container flex flex-column">
+
+<div class="chat-window">
+  <div>
+  @for(message of messages;track message){
+    @if(message.sender == sender.user){
+      <app-user-message [text]="message.text"></app-user-message>
+    }
+    @else {
+      <app-bot-message [text]="message.text"></app-bot-message>
+    }
+  }
+  </div>
+</div>
+</div>
